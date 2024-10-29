@@ -1,0 +1,66 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JackNPoy.MainPage"
+             BackgroundColor="SkyBlue">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30" VerticalOptions="CenterAndExpand">
+            <Label Text="Jack N Poy" FontSize="36" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Display current player turn -->
+            <Label x:Name="TurnLabel" Text="Player 1's Turn" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Display for Player 1 and Player 2 choices -->
+            <Label x:Name="Player1ChoiceLabel" Text="Player 1 chose: ?" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black" />
+
+            <Label x:Name="Player2ChoiceLabel" Text="Player 2 chose: ?" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Loading animation label -->
+            <Label x:Name="LoadingLabel" Text="Battling..." 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Gray"
+                   IsVisible="False" />
+
+            <!-- Progress bar for reset delay -->
+            <ProgressBar x:Name="ResetProgressBar" 
+                         WidthRequest="300" 
+                         HeightRequest="20" 
+                         HorizontalOptions="Center"
+                         VerticalOptions="Center" 
+                         Progress="0" 
+                         IsVisible="False" />
+
+            <!-- Display for game result -->
+            <Label x:Name="ResultLabel" Text="Result: ?" 
+                   FontSize="24" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   TextColor="Black" />
+
+            <!-- Buttons for player choices with emojis for rock, paper, and scissors -->
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <Button Text="✊" FontSize="36" Clicked="OnChoiceButtonClicked" />
+                <Button Text="✋" FontSize="36" Clicked="OnChoiceButtonClicked" />
+                <Button Text="✌️" FontSize="36" Clicked="OnChoiceButtonClicked" />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

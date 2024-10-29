@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="JackNPoy.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:JackNPoy"
+    Shell.FlyoutBehavior="Disabled"
+    Title="JackNPoy">
+
+    <ShellContent Title="Home" ContentTemplate="{DataTemplate local:HomePage}" Route="HomePage"/>
+    <ShellContent Title="Game" ContentTemplate="{DataTemplate local:MainPage}" Route="MainPage"/>
+
+</Shell>
